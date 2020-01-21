@@ -1,0 +1,19 @@
+{
+  "name": "traversy",
+  "version": "1.0.0",
+  "description": "trial app for traversy tutorial",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "author": "hirwa habakaramo jules",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "mocha": "^7.0.0",
+    "mongoose": "^5.8.7",
+    "nodemon": "^2.0.2",
+    "pug": "^2.0.4"
+  }
+}
