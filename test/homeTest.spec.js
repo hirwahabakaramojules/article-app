@@ -13,7 +13,6 @@ describe("welcome message",()=>{
         .get("/")
         .then(res =>{
             res.status.should.be.equal(200);
-            res.body.status.should.be.equal(200);
             res.body.message.should.be("welcome to my article app");
         })
         .catch(err => console.log(err));
