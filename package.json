@@ -3,17 +3,38 @@
   "version": "1.0.0",
   "description": "trial app for traversy tutorial",
   "main": "app.js",
+  "lint": "eslint",
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon -r esm app ",
+    "test": "nyc --reporter-html --report=text --require esm  mocha  ./test/*.spec.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "exclude": "./test/*.spec.js"
   },
   "author": "hirwa habakaramo jules",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^4.0.0",
+    "coveralls": "^3.0.9",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "joi": "^14.3.1",
     "mocha": "^7.0.0",
     "mongoose": "^5.8.7",
     "nodemon": "^2.0.2",
+    "nyc": "^15.0.0",
     "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.8.0",
+    "esm": "^3.2.25",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "passport": "^0.4.1",
+    "pg": "^7.18.2"
   }
 }
